@@ -1,0 +1,38 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "fDS1hipaCMFF0ksqOxE5m26TIIM=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "s3": {
+    "bucket": "s3uploads-test",
+    "accessKeyId": "AKIAYXCBWGQUFND2CFD7",
+    "secretAccessKey": "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",
+    "signedUrlExpires" : 900
+  },
+  "mongodb": "mongodb://localhost:27017/s3uploads?retryWrites=true&w=majority"
+}
